@@ -24,6 +24,8 @@ body{
     color:white;
     background-color: #0f0e0e;
     font-family: Arial, sans-serif;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 /* one */
 section.one .container{

@@ -46,7 +46,79 @@ cursorTimeline.fromTo(".cursor", {
     delay: .5
 })
 
-
-
+gsap.fromTo(
+   ".one .meta",
+    {
+        yPercent: -10,
+        opacity: 0,
+    },
+    {
+        yPercent: 0,
+        opacity: 1,
+        duration: 2,
+        ease: "easeIn",
+    }
+);
+document.querySelectorAll('.left').forEach(sec=>{
+    gsap.fromTo(
+        sec,
+         {
+             opacity: 0,
+             xPercent: -100,
+         },
+         {
+             opacity: 1,
+             xPercent: 0,
+             scrollTrigger: {
+                trigger: sec,
+                 start: "top 100%",
+                 end: "bottom 100%",
+                 scrub: true,
+             },
+             duration: 2,
+             ease: "ease",
+         }
+    );
+})
+document.querySelectorAll('.right').forEach(sec=>{
+    gsap.fromTo(
+        sec,
+         {
+             opacity: 0,
+             xPercent: 100,
+         },
+         {
+             opacity: 1,
+             xPercent: 0,
+             scrollTrigger: {
+                trigger: sec,
+                 start: "top 100%",
+                 end: "bottom 100%",
+                 scrub: true,
+             },
+             duration: 2,
+             ease: "ease",
+         }
+    );
+})
+document.querySelectorAll('.education .w-75 > div').forEach(sec =>{
+    gsap.fromTo(
+        sec,
+         {
+             opacity: 0,
+             yPercent: 40,
+         },
+         {
+             opacity: 1,
+             yPercent: 0,
+             scrollTrigger: {
+                trigger: sec,
+                 start: "top 80%",
+             },
+             duration: 1,
+             ease: "ease",
+         }
+    );
+})
 
 
